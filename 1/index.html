@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="l-container">
+        <div class="p-box1">
+            <!--ボックスを２つ並べて、margin-topの適用を見る。左側はmarginを適用した箱-->
+            <div class="p-width50px">
+                <p>W50px・H50px・margin-top10%</p>
+            </div>
+            <!--右側の箱。箱そのものと、margin部分を色付けしたもの-->
+            <div class="p-height55px">
+                <!--margin部分-->
+                <div class="c-margin">
+                    <p></p>
+                </div>
+                <p>H55px</p>
+            </div>
+        </div>
+        <div class="p-box2">
+            <div class="p-width100px">
+                <p>W100px・H50px・margin-top10%</p>
+            </div>
+            <div class="p-width250px">
+                <p>W250px・H50px・margin-top10%</p>
+            </div>
+        </div>
+    </section>
+        <section class="l-container">
+            <div class="c-width150px">
+                <p>150px・margin-top10%</p>
+            </div>
+            <div class="c-width300px">
+                <p>300px・margin-top20%</p>
+            </div>
+            <div class="c-width600px">
+                <p>600px・margin-top10%</p>
+            </div>
+    </section>
+</body>
+</html>
