@@ -7,6 +7,8 @@
     <link href="style.css" rel="stylesheet">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/parsley.min.js"></script>
+    <script src="js/ja.js"></script>
+    <script src="js/ja.extra.js"></script>
     <title>Document</title>
 </head>
     <body>
@@ -82,7 +84,7 @@
                                     </th>
                                     <td>
                                         <label class="p-form__registration--mailAdress">
-                                            <input type="email" required=""　data-parsley-error-message="メールアドレスを入力してください。" class="p-form__mailAdress">
+                                            <input type="email" required=""　data-parsley-error-message="メールアドレスを入れてください" class="p-form__mailAdress" data-parsley-type="email">
                                         </label>
                                     </td>
                                 </tr>
@@ -112,32 +114,32 @@
                                         <ul>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" required="" data-parsley-error-message="1つ以上チェックを入れてください。"　name="inquiryType" class="p-form__mailType--pc" data-parsley-mincheck="1" data-parsley-errors-container="#error-inquiryType" data-parsley-class-handler="#element-inquiryType"><span class="p-form__registration--inquiryType--text">登録会</span>
+                                                    <input type="checkbox" required="" data-parsley-error-message="1つ以上チェックを入れてください。"　name="inquiryType" class="p-form__mailType--pc" data-parsley-mincheck="1" data-parsley-errors-container="#error-inquiryType" data-parsley-class-handler="#element-inquiryType" data-parsley-multiple="inquiry"><span class="p-form__registration--inquiryType--text">登録会</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" name="inquiryType" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">見学</span>
+                                                    <input type="checkbox" name="inquiryType" data-parsley-multiple="inquiry" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">見学</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" name="inquiryType" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">面接</span>
+                                                    <input type="checkbox" name="inquiryType" data-parsley-multiple="inquiry" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text" >面接</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" name="inquiryType" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">セミナー・研修</span>
+                                                    <input type="checkbox" name="inquiryType" data-parsley-multiple="inquiry" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">セミナー・研修</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" name="inquiryType" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">相談</span>
+                                                    <input type="checkbox" name="inquiryType" data-parsley-multiple="inquiry" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">相談</span>
                                                 </label>
                                             </li>
                                             <li>
                                                 <label class="p-form__registration--inquiryType">
-                                                    <input type="checkbox" name="inquiryType" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">その他</span>
+                                                    <input type="checkbox" name="inquiryType" data-parsley-multiple="inquiry" class="p-form__mailType--pc"><span class="p-form__registration--inquiryType--text">その他</span>
                                                 </label>
                                             </li>
                                         </ul>
@@ -153,7 +155,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th class="p-form__items">プライバシーポリシーに同意する
+                                    <th class="p-form__items" data-parsley-error-message="プライバシーポリシーへの同意をお願いいたします" data-parsley-mincheck="1" data-parsley-multiple="agree">プライバシーポリシーに同意する
                                         <span class="p-form__required">必須</span>
                                     </th>
                                     <td>
