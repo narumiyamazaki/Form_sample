@@ -15,7 +15,7 @@
         <div class="p-backgroundColor">    
             <section class="l-main">
                 <div class="p-form__wrap">
-                    <form class="p-form" data-parsley-validate name="entry-form" action="" method="post" data-parsley-trigger="keyup focusout change input">
+                    <form class="p-form" data-parsley-validate name="entry-form"  action="" method="post" data-parsley-trigger="keyup focusout change input">
                         <table class="p-form__main">
                             <tbody>
                                 <tr>
@@ -27,7 +27,7 @@
                                             <li>
                                                 <label class="p-form__registration--basicInformation">
                                                     <!--required=""は必須項目かどうかを示す-->
-                                                    <input type="radio" required="" class="p-form__radio--registerd" value="登録済み" name="register"><span class="p-form__registration--basicInformation--text">登録済み</span>
+                                                    <input type="radio" required="" class="p-form__radio--registerd" value="登録済み" name="register" data-parsley-error-message="どちらか選択してください。" data-parsley-errors-container="#error-register"><span class="p-form__registration--basicInformation--text">登録済み</span>
                                                 </label>
                                             </li>
                                             <li>
@@ -36,6 +36,7 @@
                                                 </label>
                                             </li>
                                         </ul>
+                                        <div id="error-register"></div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -67,7 +68,7 @@
                                         <ul>
                                             <li>
                                                 <label class="p-form__registration--mailType">
-                                                    <input type="checkbox" name="mailType" class="p-form__mailType--pc" data-parsley-mincheck="1"><span class="p-form__registration--mailType--text">PC</span>
+                                                    <input type="checkbox" name="mailType" class="p-form__mailType--pc" required="" data-parsley-error-message="どちらか選択してください" data-parsley-mincheck="1" data-parsley-errors-container="#error-mailType"><span class="p-form__registration--mailType--text">PC</span>
                                                 </label>
                                             </li>
                                             <li>
@@ -76,6 +77,7 @@
                                                 </label>
                                             </li>
                                         </ul>
+                                        <div id="error-mailType"></div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -162,8 +164,7 @@
                                         <ul>
                                             <li>
                                                 <label class="p-form__registration--privacyPolicy--agree">
-                                                    <input type="checkbox" required="" class="p-form__privacyPolicy--agree" id="privacyPolicy--agree"><span class="p-form__registration--privacyPolicy--text">はい</span>
-                                                    <span class="p-form__agree">必ず同意してください</span>
+                                                    <input type="checkbox" required="" class="p-form__privacyPolicy--agree" id="privacyPolicy--agree" data-parsley-error-message="必ず同意してください。"><span class="p-form__registration--privacyPolicy--text">はい</span>
                                                 </label>
                                             </li>
                                         </ul>
@@ -181,6 +182,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="p-fom__submit--btn">
+                        <input type="submit" value="入力が完了していません" class="p-form__submit" id="form-submit">
+                        </div>
                     </form>
                 </div>
             </section>
